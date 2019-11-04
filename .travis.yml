@@ -4,3 +4,10 @@ rvm:
  - jruby
 
 script : "mvn install"
+
+notifications:
+  email:
+    recipients:
+      - jere.vienne@gmail.com
+    on_success: never # default: change
+    on_failure: always # default: always
