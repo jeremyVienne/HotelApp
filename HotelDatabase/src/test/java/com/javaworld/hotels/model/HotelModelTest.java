@@ -18,22 +18,22 @@ import com.javaworld.hotels.businessobjects.Hotel;
 import junit.framework.TestCase;
 
 public class HotelModelTest extends TestCase {
-	
+
 	public void testFindHotelsByCity1() {
 		HotelModel finder = new HotelModel();
 		List<Hotel> hotels = finder.findHotelsByCity("Paris");
 		assertTrue(hotels.size() > 0);
 		for(Hotel h : hotels) {
-			assertEquals(h.getCity(),"Paris");			
+			assertEquals(h.getCity(),"Paris");
 		}
 	}
-	
+
 	public void testFindHotelsByCity2() {
 		HotelModel finder = new HotelModel();
 		List<Hotel> hotels = finder.findHotelsByCity("London");
 		assertTrue(hotels.size() > 0);
 		for(Hotel h : hotels) {
-			assertEquals(h.getCity(),"London");			
+			assertEquals(h.getCity(),"London");
 		}
 	}
 
@@ -54,5 +54,5 @@ public class HotelModelTest extends TestCase {
 		String[] cities = finder.findAvailableCities();
 		assertEquals(cities.length, 2);
 	}
-	
+
 }
